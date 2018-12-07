@@ -11,7 +11,7 @@ Disco4G 是為 Parrot Disco 提供的軟件修改 (softmod)。除了使用原裝
 - 低成本 (改裝費小於 HK$400)
 - 原裝硬件照常使用 (包括 Parrot Skycontroller 2 和 FreeFlight Pro App)
 - 如訊號中斷，返航(RTH)功能自動開動
-- 使用 [Glympse](https://www.glympse.com/get-glympse-app/) 提供獨立的實時 GPS 位置更新
+- 使用 [Glympse](https://www.glympse.com/get-glympse-app/) 提供獨立的實時 GPS 位置更新
 - 以 Skycontroller 2 按鍵啓動 4G/LTE 遙控，容易使用
  
 壞處：
