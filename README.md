@@ -1,63 +1,35 @@
-# Parrot Disco over 4G/LTE (softmod)
+# 用 4G/LTE 遙控 Parrot Disco (softmod)
 
-## About
-Disco4G is a software modification (softmod) for the Parrot Disco drone. Instead of the built-in regular Wi-Fi, it allows to use a 4G/LTE cellular/mobile network connection to link Skycontroller 2 to the Disco. Control/telemetry and live video stream are routed through the 4G/LTE connection. In other words, range limit becomes your imagination! Ok, to be fair, it's still limited by the battery capacity :stuck_out_tongue_winking_eye:
+## 這是什麼？
+Disco4G 是為 Parrot Disco 提供的軟件修改 (softmod)。除了使用原裝的 Wi-Fi 遙控， 它還提供了 4G/LTE 移動網絡來連結 Skycontroller 2 和 Disco。遙控和直播視頻都可以通過 4G/LTE 網絡傳送。換句話說，Disco可以飛到任何距離！唔，其實它還是受制於電池容量和 4G 訊號的。 :stuck_out_tongue_winking_eye:
 
 [![Youtube video](https://uavpal.com/img/yt_thumbail_github.png)](https://www.youtube.com/watch?v=e9Xl3tTwReQ)
 ![Disco4G softmod](https://image.ibb.co/eP6A3c/disco4glte.jpg)
 
-Pros:
-- Range limit is no longer dependent on Wi-Fi signal
-- Low hardware cost (around US$ 40.-)
-- All stock hardware can be used (standard Parrot Skycontroller 2 with FreeFlight Pro App)
-- Return-to-home (RTH) is auto-initiated in case of connection loss
-- Allows independent real-time GPS tracking via [Glympse](https://www.glympse.com/get-glympse-app/)
-- Easy initiation of 4G/LTE connection via Skycontroller 2 button
-- Can be used for manually controlled flights as well as flight plans
+好處：
+- 飛行距離不再受制於 WiFi 訊號
+- 低成本 (改裝費小於 HK$400)
+- 原裝硬件照常使用 (包括 Parrot Skycontroller 2 和 FreeFlight Pro App)
+- 如訊號終斷，一鍵返航 (RTH) 功能自動開動
+- 使用 [Glympse](https://www.glympse.com/get-glympse-app/) 提供獨立的實時 GPS 位置更新
+- 以 Skycontroller 2 按鍵啓動 4G/LTE 遙控，容易使用
+ 
+壞處：
+- 受制於 [4G/LTE 移動網絡的覆蓋](https://zh.wikipedia.org/wiki/%E5%90%84%E5%9C%8B4G_LTE%E6%BB%B2%E9%80%8F%E7%8E%87%E5%88%97%E8%A1%A8) 
+- 使用移動數據會有額外費用
+- 比 Wi-Fi 有較大的延遲 (latency)
 
-Cons:
-- Dependent on [4G/LTE mobile network coverage](https://en.wikipedia.org/wiki/List_of_countries_by_4G_LTE_penetration) 
-- Might incur mobile data cost (dependent on your mobile network operator)
-- Slightly higher latency as compared to Wi-Fi
-
-## Why?
-- The Parrot Disco's stock Wi-Fi loses video signal way before the specified 2 km.
-- Because we can :grin:
-
-## How does it work?
+## 它如何運作?
 ![High-level connection diagram](https://preview.ibb.co/c8qPP7/disco4g_highlevel_diagram_end2end.png)
 
-In simple terms, the Wi-Fi connection is hijacked and routed via a tethering device (e.g. mobile phone) through a 4G/LTE cellular/mobile network to the Disco. As tethering device, any modern mobile phone can be used (iOS: "Personal Hotspot" or Android: "Portable WLAN hotspot").
-The Disco requires a 4G/LTE USB modem to be able to send and receive data via cellular/mobile networks.
-
-![USB Modem inside Disco's canopy](https://preview.ibb.co/g5rgNS/modem_in_disco.jpg)
-
-Initiation of the 4G/LTE connection (and switch back to Wi-Fi) can be done by simply pressing the Settings button twice on Skycontroller 2.
-
-![Settings Button on Skycontroller 2](https://image.ibb.co/iBWcgn/settingsbutton.jpg)
-
-The "Power" LED on Skycontroller 2 will change to solid blue once the 4G/LTE connection to the Disco is established.
-
-[![Skycontroller 2 with blue LED](https://image.ibb.co/f5Uz97/SC2_small_blue.jpg)](https://www.youtube.com/watch?v=SEz70ClCetM)
-
-Once up in the air, everything works in the same manner as with the stock Wi-Fi connection, e.g. flight plans, return-to-home (auto-initiated in case of connection loss), etc.
-
-Note: The mobile device running FreeFlight Pro (the one connected to Skycontroller 2 via USB) can even be the same as the mobile tethering device/phone.
-
-[ZeroTier](https://zerotier.com) is a free online service, which we use to manage the connection between Disco and Skycontroller 2. This allows to do NAT traversal which is required due to the mobile tethering device and even some modems. Whether direct 4G/LTE-internal connections are allowed depends on your mobile network operator. ZeroTier allows to connect Skycontroller 2 to your Disco via an encrypted channel, regardless of the network topology.
-
-Additionally, [Glympse](https://www.glympse.com/get-glympse-app/), a free App for iOS/Android allows independent real-time GPS tracking of the Disco via 4G/LTE. This can be particularly useful to recover the Disco in the unfortunate event of a crash or flyaway.
-
-![Glympse App showing Disco's location](https://image.ibb.co/kwt4bn/discoglympse.png)
-
-## Requirements
-*Hardware:*
-- Parrot Disco drone
-- Parrot Skycontroller 2 (Skycontroller 2P with the black joysticks is in [Beta](https://github.com/uavpal/disco4g/issues/18#issuecomment-402980602))
-- [Huawei E3372 4G USB modem](https://consumer.huawei.com/en/mobile-broadband/e3372/specs/) and SIM card\
-Note: there are different Huawei E3372 models available - please read [this FAQ entry](https://github.com/uavpal/disco4g/wiki/FAQ#e3372models) before buying to ensure your mobile network operator is supported.
-- Antennas (2x CRC9) for the modem (optional, but recommended)
-- USB OTG cable (Micro USB 2.0 Male to USB 2.0 Female, ca. 10 cm, [angle cable](https://www.aliexpress.com/wholesale?SearchText=USB+OTG+angle) recommended - order "direction up")
+## 預備：
+*硬件要求:*
+- Parrot Disco
+- Parrot Skycontroller 2 (如果是黑色操縱桿的 Skycontroller 2P，請看 [Beta](https://github.com/uavpal/disco4g/issues/18#issuecomment-402980602))
+- [華為 E3372 4G USB modem](https://consumer.huawei.com/en/mobile-broadband/e3372/specs/) 和 SIM card\
+注意： 華為 E3372 也有很多不同的版本，請看[這篇 FAQ](https://github.com/uavpal/disco4g/wiki/FAQ#e3372models) 選擇適合你的版本。（在香港可使用 E3372h)
+- 4G USB modem 的天綫兩條 CRC9 接頭 [參考](https://bit.ly/2ryfSy9)
+- [USB OTG 線](https://bit.ly/2EknoFb) 因為電池位置的限制，最好是轉90度的。
 - Mobile device/phone with Wi-Fi tethering and SIM card (for best performance, use the same operator as the USB modem's SIM card)
 - PC with Wi-Fi (one-time, required for initial installation)
 
