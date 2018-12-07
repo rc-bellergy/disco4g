@@ -4,9 +4,7 @@
 Disco4G 是為 Parrot Disco 提供的軟件修改 (softmod)。除了使用原裝的 Wi-Fi 遙控，它還提供了 4G/LTE 移動網絡來連結 Skycontroller 2 和 Disco。遙控和直播視頻都可以通過 4G/LTE 網絡傳送。換句話說，Disco可以飛到任何距離！唔，其實它還是受制於電池容量和 4G 訊號的。 :stuck_out_tongue_winking_eye:
 
 [![Youtube video](https://uavpal.com/img/yt_thumbail_github.png)](https://www.youtube.com/watch?v=e9Xl3tTwReQ)
-<div style="width:395px;">
-<img src="https://designquest.com.hk/share/disco4g/body.jpg" alt="Parrot Disco 4G softmod">
-</div>
+<img src="https://designquest.com.hk/share/disco4g/body.jpg" alt="Parrot Disco 4G softmod" width="395">
 
 好處：
 - 飛行距離不再受制於 WiFi 訊號
