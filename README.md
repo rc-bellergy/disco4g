@@ -1,25 +1,25 @@
 ﻿# 用 4G/LTE 遙控 Parrot Disco (softmod)
 
 ## 這是什麼？
-Disco4G 是為 Parrot Disco 提供的軟件修改 (softmod)。除了使用原裝的 Wi-Fi 遙控，它還提供了 4G/LTE 移動網絡來連結 Skycontroller 2 和 Disco。遙控和直播視頻都可以通過 4G/LTE 網絡傳送。換句話說，Disco可以飛到任何距離！唔，其實它還是受制於電池容量和 4G 訊號的。 :stuck_out_tongue_winking_eye:
+Disco4G 是為 Parrot Disco 提供的軟件修改 (softmod)。除了使用原裝的 Wi-Fi 遙控，它還提供了 4G/LTE 移動網絡來連結 Skycontroller 2 和 Disco。遙控和直播視頻都可以通過 4G/LTE 網絡傳送。換句話說，Disco可以飛到任何距離！唔，其實它還是受制於電池容量和 4G 訊號的。 :stuck_out_tongue_winking_eye:
 
 [![Youtube video](https://uavpal.com/img/yt_thumbail_github.png)](https://www.youtube.com/watch?v=e9Xl3tTwReQ)
 ![Disco4G softmod](https://image.ibb.co/eP6A3c/disco4glte.jpg)
 
 好處：
-- 飛行距離不再受制於 WiFi 訊號
+- 飛行距離不再受制於 WiFi 訊號
 - 低成本 (改裝費小於 HK$400)
-- 原裝硬件照常使用 (包括 Parrot Skycontroller 2 和 FreeFlight Pro App)
-- 如訊號中斷，一鍵返航 (RTH) 功能自動開動
+- 原裝硬件照常使用 (包括 Parrot Skycontroller 2 和 FreeFlight Pro App)
+- 如訊號中斷，返航(RTH)功能自動開動
 - 使用 [Glympse](https://www.glympse.com/get-glympse-app/) 提供獨立的實時 GPS 位置更新
-- 以 Skycontroller 2 按鍵啓動 4G/LTE 遙控，容易使用
+- 以 Skycontroller 2 按鍵啓動 4G/LTE 遙控，容易使用
  
 壞處：
 - 受制於 [4G/LTE 移動網絡的覆蓋](https://zh.wikipedia.org/wiki/%E5%90%84%E5%9C%8B4G_LTE%E6%BB%B2%E9%80%8F%E7%8E%87%E5%88%97%E8%A1%A8) 
 - 使用移動數據會有額外費用
-- 比 Wi-Fi 有較大的延遲 (latency)
+- 比 Wi-Fi 有較大的延遲 (latency)
 
-## 它如何運作?
+## 它如何運作?
 ![High-level connection diagram](https://designquest.com.hk/share/disco4g/disco4g-chart.jpg)
 
 ## 預備：
